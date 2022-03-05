@@ -29,3 +29,17 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+    
+  deploy: ##
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.0ea0bf47-a80d-4212-adda-03a81162cfa9}}
+          heroku_app_name: "pavmegman"
+          heroku_email: "johncultnight@gmail.com"  
+    
+    
+
