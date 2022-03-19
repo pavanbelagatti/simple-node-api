@@ -1,0 +1,12 @@
+connector:
+  name: cidelegate
+  identifier: cidelegate
+  description:
+  orgIdentifier: default
+  projectIdentifier: collci
+  type: K8sCluster
+  spec:
+    credential:
+      type: InheritFromDelegate
+    delegateSelectors:
+    - namdudel

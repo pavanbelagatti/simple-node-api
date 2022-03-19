@@ -1,0 +1,20 @@
+connector:
+  name: quicks
+  identifier: quicks
+  description:
+  orgIdentifier: default
+  projectIdentifier: collci
+  type: Github
+  spec:
+    url: https://github.com/pavanbelagatti/my-app-new.git
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: pavanbelagatti
+          tokenRef: githubpat
+    delegateSelectors:
+    - namdudel
+    executeOnDelegate: true
+    type: Repo

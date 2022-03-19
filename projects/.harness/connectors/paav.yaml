@@ -1,0 +1,24 @@
+connector:
+  name: paav
+  identifier: paav
+  description:
+  orgIdentifier: default
+  projectIdentifier: collci
+  type: Github
+  spec:
+    url: https://github.com/pavanbelagatti/simple-node-api
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: pavanbelagatti
+          tokenRef: githubpat
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: githubpat
+    delegateSelectors:
+    - newdel
+    executeOnDelegate: true
+    type: Repo
