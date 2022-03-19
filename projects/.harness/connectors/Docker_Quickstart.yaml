@@ -1,0 +1,18 @@
+connector:
+  name: Docker Quickstart
+  identifier: Docker_Quickstart
+  description:
+  orgIdentifier: default
+  projectIdentifier: collci
+  type: DockerRegistry
+  spec:
+    dockerRegistryUrl: https://index.docker.io/v1/
+    providerType: DockerHub
+    auth:
+      type: UsernamePassword
+      spec:
+        username: pavansa
+        usernameRef: null
+        passwordRef: docker
+    delegateSelectors:
+    - namdudel
